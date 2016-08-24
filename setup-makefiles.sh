@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export VENDOR=samsung
-export DEVICE=hltedcm
+export DEVICE=klimtdcm
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
@@ -110,7 +110,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifneq (\$(filter hltedcm,\$(TARGET_DEVICE)),)
+ifneq (\$(filter klimtdcm,\$(TARGET_DEVICE)),)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := TimeService

@@ -15,9 +15,9 @@
 # inherit from common msm8974
 -include device/samsung/msm8974-common/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/hltedcm/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/klimtdcm/include
 
-TARGET_OTA_ASSERT_DEVICE := hlte,hltedcm,SM-N900D,SC-01F
+TARGET_OTA_ASSERT_DEVICE := klimtdcm,klimtltedcm,SM-T707D,SC-03G
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
@@ -35,7 +35,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 TARGET_KERNEL_CONFIG := cm_msm8974_sec_defconfig
-TARGET_KERNEL_VARIANT_CONFIG := cm_msm8974_sec_hlte_dcm_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := cm_msm8974_sec_klimtdcm_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := cm_selinux_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8974
 
@@ -44,8 +44,8 @@ BOARD_HAVE_NEW_QCOM_CSDCLIENT := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
 # Bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/hltedcm/bluetooth/vnd_hltedcm.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/hltedcm/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/klimtdcm/bluetooth/vnd_klimtdcm.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/klimtdcm/bluetooth
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 BOARD_HAVE_BLUETOOTH_BCM := true
 
@@ -58,10 +58,10 @@ TARGET_PROVIDES_CAMERA_HAL := true
 COMMON_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
 
 # CMHW
-BOARD_HARDWARE_CLASS += device/samsung/hltedcm/cmhw
+BOARD_HARDWARE_CLASS += device/samsung/klimtdcm/cmhw
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/samsung/hltedcm/ril
+BOARD_RIL_CLASS := ../../../device/samsung/klimtdcm/ril
 
 # Graphics
 TARGET_HAVE_NEW_GRALLOC := true
@@ -82,12 +82,12 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 322122752
 
 # Power HAL
 TARGET_POWERHAL_VARIANT := qcom
-TARGET_POWERHAL_SET_INTERACTIVE_EXT := device/samsung/hltedcm/power/power_ext.c
+TARGET_POWERHAL_SET_INTERACTIVE_EXT := device/samsung/klimtdcm/power/power_ext.c
 
 #RECOVERY_VARIANT := twrp
 # Recovery
 ifneq ($(RECOVERY_VARIANT),twrp)
-TARGET_RECOVERY_FSTAB := device/samsung/hltedcm/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/samsung/klimtdcm/rootdir/etc/fstab.qcom
 endif
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -105,7 +105,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.allow.mock.location=1 \
     ro.debuggable=1 \
     persist.sys.usb.config=adb
-TARGET_RECOVERY_FSTAB := device/samsung/hltedcm/rootdir/etc/fstab.twrp
+TARGET_RECOVERY_FSTAB := device/samsung/klimtdcm/rootdir/etc/fstab.twrp
 DEVICE_RESOLUTION := 1080x1920
 BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_SDCARD_ON_DATA := true
@@ -126,7 +126,7 @@ endif
 
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/samsung/hltedcm/sepolicy
+BOARD_SEPOLICY_DIRS += device/samsung/klimtdcm/sepolicy
 
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI := true
@@ -144,4 +144,4 @@ WIFI_DRIVER_FW_PATH_STA     := "/system/etc/wifi/bcmdhd_sta.bin"
 WIFI_DRIVER_FW_PATH_AP      := "/system/etc/wifi/bcmdhd_apsta.bin"
 
 # inherit from the proprietary version
--include vendor/samsung/hltedcm/BoardConfigVendor.mk
+-include vendor/samsung/klimtdcm/BoardConfigVendor.mk
