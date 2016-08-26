@@ -463,8 +463,12 @@ on boot
     chown system radio /sys/class/sec/switch/adc
     chown system radio /sys/class/sec/switch/otg_test
 
-# Fingerprint
-    mkdir /dev/validity 0775 system system
+    # Fingerprint
+    mkdir /dev/validity 0770 system system
+    mkdir /data/validity 0770 system system
+
+    # Fingerprint_sensor
+    chown system radio /sys/class/fingerprint/fingerprint/type_check
 
 # SEC DVFS sysfs node
     chown radio system /sys/power/cpufreq_max_limit
@@ -1048,6 +1052,11 @@ on boot
 on property:persist.usb.chgdisabled=1
     write /sys/class/power_supply/battery/charging_enabled 0
 
+service fingerprintd /system/bin/fingerprintd
+    class late_start
+    user system
+    group input
+
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class main
@@ -1343,6 +1352,12 @@ service hcidump /system/bin/sh /system/etc/hcidump.sh
 service charger /charger
     class charger
     seclabel u:r:healthd:s0
+
+# SENSOR FRAMEWORK : starts fingerprintService
+service vcsFPService /system/bin/vcsFPService
+    class late_start
+    user system
+    group system
 
 # Disable SSR to SoC restart
 on property:persist.sys.ssr.restart_level=1
