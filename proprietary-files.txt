@@ -218,9 +218,6 @@ vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libSHIMDivxDrm.so
 
-# NFC
-etc/firmware/nfc_test.bin
-
 # Perf
 vendor/lib/libqti-perfd-client.so
 
