@@ -1052,10 +1052,10 @@ on boot
 on property:persist.usb.chgdisabled=1
     write /sys/class/power_supply/battery/charging_enabled 0
 
-service fingerprintd /system/bin/fingerprintd
-    class late_start
-    user system
-    group input
+#service fingerprintd /system/bin/fingerprintd
+#    class late_start
+#    user system
+#    group input
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
@@ -1354,10 +1354,10 @@ service charger /charger
     seclabel u:r:healthd:s0
 
 # SENSOR FRAMEWORK : starts fingerprintService
-service vcsFPService /system/bin/vcsFPService
-    class late_start
-    user system
-    group system
+#service vcsFPService /system/bin/vcsFPService
+#    class late_start
+#    user system
+#    group system
 
 # Disable SSR to SoC restart
 on property:persist.sys.ssr.restart_level=1
