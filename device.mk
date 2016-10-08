@@ -86,8 +86,7 @@ PRODUCT_COPY_FILES += \
 # Fingerprint
 #PRODUCT_PACKAGES += \
 #    fingerprintd \
-#    fingerprint.msm8974 \
-#    ValidityService
+#    fingerprint.msm8974
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
