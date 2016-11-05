@@ -1354,6 +1354,12 @@ service charger /charger
     class charger
     seclabel u:r:healthd:s0
 
+# SENSOR FRAMEWORK : starts fingerprintService
+#service vcsFPService /system/bin/vcsFPService
+#    class late_start
+#    user system
+#    group system
+
 # Disable SSR to SoC restart
 on property:persist.sys.ssr.restart_level=1
     write /sys/module/subsystem_restart/parameters/restart_level 1
