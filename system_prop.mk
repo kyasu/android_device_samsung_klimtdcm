@@ -77,7 +77,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.telephony.mqanelements=6 \
     ro.telephony.ril_class=SamsungQcomRIL \
     ro.telephony.default_network=9 \
-    telephony.lteOnGsmDevice=1
+    telephony.lteOnGsmDevice=1 \
+    ro.telephony.ril.config=newDialCode
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
