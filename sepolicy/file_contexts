@@ -22,6 +22,9 @@
 /dev/validity(/.*)?                                     u:object_r:vcs_device:s0
 /dev/vfsspi                                             u:object_r:vcs_device:s0
 
+# GPU
+/sys/devices/fdb00000.qcom,kgsl-3d0/kgsl/kgsl-3d0(/.*)? u:object_r:sysfs_gpu:s0
+
 # Macloader
 /system/bin/macloader                                   u:object_r:macloader_exec:s0
 
