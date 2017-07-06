@@ -89,9 +89,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sap.conf:system/etc/sap.conf
 
 # Fingerprint
-#PRODUCT_PACKAGES += \
-#    fingerprintd \
-#    fingerprint.msm8974
+PRODUCT_PACKAGES += \
+    fingerprintd \
+    fingerprint.msm8974
 
 # IPv6 tethering
 PRODUCT_PACKAGES += \

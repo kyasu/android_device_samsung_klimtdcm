@@ -1042,10 +1042,10 @@ on boot
 on property:persist.usb.chgdisabled=1
     write /sys/class/power_supply/battery/charging_enabled 0
 
-#service fingerprintd /system/bin/fingerprintd
-#    class late_start
-#    user system
-#    group input
+service fingerprintd /system/bin/fingerprintd
+    class late_start
+    user system
+    group input
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
