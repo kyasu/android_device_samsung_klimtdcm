@@ -20,6 +20,9 @@ TARGET_SPECIFIC_HEADER_PATH := device/samsung/klimtdcm/include
 
 TARGET_OTA_ASSERT_DEVICE := klimtdcm,klimtltedcm,SM-T707D,SC-03G
 
+# ADB Legacy Interface
+TARGET_USES_LEGACY_ADB_INTERFACE := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 
