@@ -75,6 +75,9 @@ TARGET_KERNEL_HAVE_EXFAT := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := device/samsung/klimtdcm/config.fs
 
+# HIDL
+DEVICE_MANIFEST_FILE += device/samsung/klimtdcm/manifest.xml
+
 # Legacy BLOB Support
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
