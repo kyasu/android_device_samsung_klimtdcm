@@ -25,9 +25,6 @@ PRODUCT_CHARACTERISTICS := tablet
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# System properties
--include $(LOCAL_PATH)/system_prop.mk
-
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
