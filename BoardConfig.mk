@@ -61,9 +61,6 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 TARGET_PROVIDES_CAMERA_HAL := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
-# CMHW
-BOARD_HARDWARE_CLASS += device/samsung/klimtdcm/cmhw
-
 # Extended Filesystem Support
 TARGET_KERNEL_HAVE_EXFAT := true
 
@@ -72,6 +69,9 @@ TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
+
+# LineageHW
+BOARD_HARDWARE_CLASS += device/samsung/klimtdcm/lineagehw
 
 # NFC
 #BOARD_NFC_HAL_SUFFIX := msm8974
