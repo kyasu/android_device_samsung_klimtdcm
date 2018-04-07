@@ -21,6 +21,6 @@ $(call inherit-product, device/samsung/klimtdcm/device.mk)
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_klimtdcm
 PRODUCT_DEVICE := klimtdcm
+PRODUCT_MODEL := klimtdcm
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SC-03G

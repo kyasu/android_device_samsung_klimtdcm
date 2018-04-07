@@ -23,14 +23,14 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 $(call inherit-product, device/samsung/klimtdcm/full_klimtdcm.mk)
 
-PRODUCT_DEVICE := klimtdcm
+## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_klimtdcm
+PRODUCT_DEVICE := klimtdcm
+PRODUCT_MODEL := SC-03G
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=klimtdcm \
-    PRODUCT_DEVICE=klimtdcm \
-    TARGET_DEVICE=klimtdcm \
-    PRODUCT_MODEL=SC-03G \
+    PRODUCT_NAME=SC-03G \
+    TARGET_DEVICE=SC-03G \
     PRIVATE_BUILD_DESC="klimtltedcm-user 5.0.2 LRX22G SC03GOMU1BPJ1 release-keys"
 
 BUILD_FINGERPRINT := samsung/SC-03G/SC-03G:5.0.2/LRX22G/SC03GOMU1BPJ1:user/release-keys
