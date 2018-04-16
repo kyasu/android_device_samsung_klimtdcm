@@ -1,0 +1,3 @@
+#allow access to efs file for fingerprint
+allow tee efs_file:dir rw_dir_perms;
+allow tee efs_file:file r_file_perms;
