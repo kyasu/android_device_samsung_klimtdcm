@@ -15,9 +15,14 @@
 #
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+$(call inherit-product, frameworks/native/build/tablet-7in-xhdpi-2048-dalvik-heap.mk)
+
+# Inherit from msm8974-common
+$(call inherit-product, device/samsung/msm8974-common/msm8974.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/klimtdcm/klimtdcm-vendor.mk)
+
 
 ## We are a tablet, not a phone
 PRODUCT_CHARACTERISTICS := tablet
@@ -35,9 +40,6 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi mdpi
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1600
-
-$(call inherit-product, frameworks/native/build/tablet-7in-xhdpi-2048-dalvik-heap.mk)
-
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -111,6 +113,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
-
-# common msm8974
-$(call inherit-product, device/samsung/msm8974-common/msm8974.mk)
