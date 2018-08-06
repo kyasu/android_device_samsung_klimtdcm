@@ -252,7 +252,7 @@ vendor/lib/librs_adreno_sha1.so|e797997d3ac69dfa87904863672c5b9769c796cc
 
 # Sensors
 lib/libak09911c.so:vendor/lib/libak09911c.so
-lib/hw/sensors.msm8974.so:vendor/lib/hw/sensors.msm8974.so
+lib/hw/sensors.msm8974.so:vendor/lib/hw/sensors.vendor.msm8974.so
 
 # STLport (Camera/RIL) - local compile LineageOS/external/stlport@984b8432
 vendor/lib/libstlport.so|0be0a0d13e12fbf95d97d309dcbc25d3f969a469
