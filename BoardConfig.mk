@@ -49,7 +49,6 @@ TARGET_USE_SDCLANG := true
 
 
 # Audio
-BOARD_HAVE_NEW_QCOM_CSDCLIENT := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
 # Bluetooth
