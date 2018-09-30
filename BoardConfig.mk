@@ -76,7 +76,7 @@ TARGET_LD_SHIM_LIBS += \
 TARGET_PROVIDES_LIBLIGHT := true
 
 # LineageHW
-BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/lineagehw
+JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(DEVICE_PATH)/lineagehw|**/*.java
 
 # NFC
 #BOARD_NFC_HAL_SUFFIX := msm8974
