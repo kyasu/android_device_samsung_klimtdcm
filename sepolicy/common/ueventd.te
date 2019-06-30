@@ -1,0 +1,2 @@
+allow ueventd audio_data_file:dir r_dir_perms;
+allow ueventd audio_data_file:file r_file_perms;

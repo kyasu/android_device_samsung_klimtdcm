@@ -1,12 +1,16 @@
 # data files
+/data/.psm.info                                         u:object_r:wifi_data_file:s0
+/data/misc/akmd(.*)                                     u:object_r:hal_data_file:s0
 /data/validity(/.*)?                                    u:object_r:vfsspi_data_file:s0
 
 # device nodes
-/dev/ttyHS3                                             u:object_r:audio_device:s0
 /dev/vfsspi                                             u:object_r:vfsspi_device:s0
 
+# efs files
+/efs/hw_offset                                          u:object_r:sensors_efs_file:s0
+
 # sysfs
-/sys/devices(/.*)?/input/input[1-2]/enabled             u:object_r:sysfs_hal_pwr:s0
+/sys/devices(/.*)?/input/input[2-4]/enabled             u:object_r:sysfs_hal_pwr:s0
 
 # sysfs - fingerprint
 /sys/devices/virtual/fingerprint(/.*)?                  u:object_r:sysfs_fingerprint:s0
