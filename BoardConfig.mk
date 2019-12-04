@@ -81,9 +81,6 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# LineageHW
-JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(DEVICE_PATH)/lineagehw|**/*.java
-
 # NFC
 #BOARD_NFC_HAL_SUFFIX := msm8974
 
