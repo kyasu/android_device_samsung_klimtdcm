@@ -89,8 +89,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     camera.device@1.0-impl \
     camera.msm8974 \
-    libxml2 \
-    Snap
+    libxml2
 
 # DRM
 PRODUCT_PACKAGES += \
