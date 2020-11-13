@@ -90,7 +90,7 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
     camera.msm8974 \
     libxml2 \
-    GoogleCamera
+    Snap
 
 # DRM
 PRODUCT_PACKAGES += \
